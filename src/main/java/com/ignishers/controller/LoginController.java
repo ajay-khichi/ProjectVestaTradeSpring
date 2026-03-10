@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ignishers.daoimpl.CustomerDaoImpl;
 import com.ignishers.daoimpl.UserDaoImpl;
+import com.ignishers.enums.AccountStatus;
 import com.ignishers.enums.Role;
 import com.ignishers.pojo.Customer;
 import com.ignishers.pojo.User;
@@ -78,7 +79,14 @@ public class LoginController {
 				mv = new ModelAndView("adminhome", "msg", "Welcome Admin");
 			}
 			if(u.getRole().equals(Role.CUSTOMER)) {
-				mv = new ModelAndView("customerhome", "msg", "Welcome User");
+				if(u.getAccountStatus().equals(AccountStatus.VERIFIED))
+					mv = new ModelAndView("customerhome", "msg", "Welcome User");
+				if(u.getAccountStatus().equals(AccountStatus.PENDING))
+					mv = new ModelAndView("login", "msg", "User Verification is pending!");
+				if(u.getAccountStatus().equals(AccountStatus.SUSPENDED))
+					mv = new ModelAndView("login", "msg", "User is Blocked by admin!");
+				if(u.getAccountStatus().equals(AccountStatus.REJECTED))
+					mv = new ModelAndView("login", "msg", "User Application Rejected!");
 			}
 		}
 		else

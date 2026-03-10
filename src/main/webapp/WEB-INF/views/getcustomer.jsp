@@ -16,10 +16,26 @@
 
 
 <div class="container py-5">
+
 <div class="d-grid gap-2 col-6 mx-auto">
-  <a href="amdstock" class="btn btn-secondary btn-lg">Add / Update Stock</a>
-  <a href="amdStock" class="btn btn-secondary btn-lg">Delete Stock</a>
-  <a href="amdStock" class="btn btn-secondary btn-lg">Get Stock</a>
+	<h2 class="heading">Get Customer by Email Id</h2>
+	<%
+      	String msg1 = (String)request.getAttribute("msg");
+      	if(msg1!=null)
+      		out.print(msg1);
+      %>
+  <form action="getcst" method="post">
+        <div class="row g-2">
+          <div class="col-12"><label class="form-label">Email *</label>
+          <input type="email" name="email" class="form-control" placeholder="rahul@email.com" required/></div>
+          
+
+        <button type="submit" class="btn btn-primary d-block w-100 mt-3" name="b1" value="details">
+          Get Customer Details <i class="bi bi-arrow-right ms-2"></i>
+        </button>
+        </div>
+  </form>
+  <a href="adminhome" class="btn btn-info btn-lg">Back to Home</a><br>
 </div>
 </div>
 

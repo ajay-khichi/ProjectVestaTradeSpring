@@ -16,10 +16,14 @@
 
 
 <div class="container py-5">
+
 <div class="d-grid gap-2 col-6 mx-auto">
-  <a href="amdStock" class="btn btn-secondary btn-lg">Add / Update Stock</a>
-  <a href="amdStock" class="btn btn-secondary btn-lg">Delete Stock</a>
-  <a href="amdStock" class="btn btn-secondary btn-lg">Get Stock</a>
+	<h2 class="heading">Customer Menu</h2>
+  <a href="amdcustomer" class="btn btn-secondary btn-lg">Update / Delete / Block Customer</a>
+  <a href="getcustomer" class="btn btn-secondary btn-lg">Get Customer</a>
+  <a href="getallcst" class="btn btn-secondary btn-lg">All Customers</a>
+  <a href="verifypage" class="btn btn-secondary btn-lg">Account Verification</a><br><br>
+  <a href="adminhome" class="btn btn-info btn-lg">Back to Home</a><br>
 </div>
 </div>
 
