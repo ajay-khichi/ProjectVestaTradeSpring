@@ -1,0 +1,39 @@
+# IDE and Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+
+# Build and dependencies
+target/
+build/
+.gradle/
+*.class
+*.jar
+*.war
+
+# Test files and coverage
+*.log
+coverage/
+.jacoco*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Maven
+.m2/
+pom.xml.tag
+pom.xml.asc
+
+# Spring Boot
+application-*.properties
+application-*.yml
+
+# Temporary and generated files
+*.tmp
+*.bak
+*.rar
+.env

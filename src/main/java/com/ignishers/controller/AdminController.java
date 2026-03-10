@@ -15,6 +15,25 @@ public class AdminController {
             session.invalidate();
         }
 
-        return "redirect:/";
+        return "index";
     }
+	
+	@GetMapping("/adminstock")
+    public String adminstockpage() {
+        return "adminstock";
+    }
+	@GetMapping("/editcustomers")
+    public String editcustomerspage() {
+        return "editcustomers";
+    }
+	@GetMapping("/editprofile")
+    public String editprofilepage() {
+        return "editprofile";
+    }
+	@GetMapping("/adminhome")
+    public String adminhomepage() {
+        return "adminhome";
+    }
+	
+	
 }
