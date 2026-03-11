@@ -18,21 +18,23 @@
 <div class="container py-5">
 
 <div class="d-grid gap-2 col-6 mx-auto">
-	<h2 class="heading">Get Stock by Symbol Name</h2>
+	<h2 class="heading">Get Customer by Email Id</h2>
 	<%
       	String msg1 = (String)request.getAttribute("msg");
       	if(msg1!=null)
       		out.print(msg1);
       %>
-  <form action="getstock" method="post">
+  <form action="getcst" method="post">
+        <div class="row g-2">
+          <div class="col-12"><label class="form-label">Email *</label>
+          <input type="email" name="email" class="form-control" placeholder="rahul@email.com" required/></div>
+          
 
-<input type="text" name="symbol" placeholder="Enter Symbol" class="form-control">
-
-<button type="submit" class="btn btn-primary mt-2">
-Search
-</button>
-
-</form>
+        <button type="submit" class="btn btn-primary d-block w-100 mt-3" name="b1" value="details">
+          Get Customer Details <i class="bi bi-arrow-right ms-2"></i>
+        </button>
+        </div>
+  </form>
   <a href="adminhome" class="btn btn-info btn-lg">Back to Home</a><br>
 </div>
 </div>

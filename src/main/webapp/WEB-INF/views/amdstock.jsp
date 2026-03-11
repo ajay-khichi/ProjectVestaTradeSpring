@@ -15,26 +15,56 @@
 <%@include file="headeradmin.jsp" %>
 
 
-<div class="container py-5">
 
-<div class="d-grid gap-2 col-6 mx-auto">
-	<h2 class="heading">Get Stock by Symbol Name</h2>
-	<%
+<div class="container mt-5">
+
+<h3 class="text-center">Stock Management</h3>
+<%
       	String msg1 = (String)request.getAttribute("msg");
       	if(msg1!=null)
       		out.print(msg1);
       %>
-  <form action="getstock" method="post">
+<form action="amdstock" method="post">
 
-<input type="text" name="symbol" placeholder="Enter Symbol" class="form-control">
+<div class="mb-3">
+<label>Symbol</label>
+<input type="text" name="symbol" class="form-control" required>
+</div>
 
-<button type="submit" class="btn btn-primary mt-2">
-Search
+<div class="mb-3">
+<label>Company Name</label>
+<input type="text" name="companyName" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Price</label>
+<input type="number" step="0.01" name="price" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Available Shares</label>
+<input type="number" name="shares" class="form-control">
+</div>
+
+<div class="text-center">
+
+<button type="submit" name="action" value="Add" class="btn btn-success">
+Add Stock
 </button>
 
-</form>
-  <a href="adminhome" class="btn btn-info btn-lg">Back to Home</a><br>
+<button type="submit" name="action" value="Update" class="btn btn-warning">
+Update Stock
+</button>
+
+<button type="submit" name="action" value="Delete" class="btn btn-danger">
+Delete Stock
+</button>
+
 </div>
+
+</form>
+ <a href="adminhome" class="btn btn-info btn-lg">Back to Home</a><br>
+
 </div>
 
 <%@include file="footer.jsp" %>

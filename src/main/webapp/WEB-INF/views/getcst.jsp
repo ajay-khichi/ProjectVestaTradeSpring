@@ -24,7 +24,7 @@
           <div class="container py-5">
 
             <div class="d-grid gap-2 col-6 mx-auto">
-              <h2 class="heading">Update / Delete / Block Customer</h2>
+              <h2 class="heading">Customer Details</h2>
               <% Customer u=(Customer)request.getAttribute("user"); %>
                 <form action="amdcst" method="post">
                   <p class="section-tag mt-2">Personal Details</p>
@@ -85,11 +85,7 @@
                       </div>
                     </div>
 
-                    <div class="mt-4 text-center">
-                      <button type="submit" name="b1" value="Update" class="btn btn-primary me-2">Update</button>
-                      <button type="submit" name="b1" value="Delete" class="btn btn-danger me-2">Delete</button>
-                      <button type="submit" name="b1" value="Block" class="btn btn-warning">Block</button>
-                    </div>
+                 
                 </form>
 
                 <a href="adminhome" class="btn btn-info btn-lg mt-3">Back to Home</a>

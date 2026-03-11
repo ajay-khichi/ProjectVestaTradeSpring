@@ -26,7 +26,7 @@ name="ds">
 	<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
 	<property name="url" value="jdbc:mysql://localhost:3306/cdgi26"/>
 	<property name="username" value="root"/>
-	<property name="password" value="root"/>
+	<property name="password" value="Adarsh@787"/>
 </bean>
 
 
@@ -67,6 +67,8 @@ name = "hTemplate">
 </bean>
 
 <bean class="com.ignishers.daoimpl.AdminDaoImpl" name="admindao" autowire="byName">
+</bean>
+<bean class="com.ignishers.daoimpl.StockDaoImpl" name="stockDao" autowire="byName">
 </bean>
 
 <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>

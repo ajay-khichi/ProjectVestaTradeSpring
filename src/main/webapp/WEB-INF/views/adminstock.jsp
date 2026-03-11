@@ -17,8 +17,7 @@
 
 <div class="container py-5">
 <div class="d-grid gap-2 col-6 mx-auto">
-  <a href="amdstock" class="btn btn-secondary btn-lg">Add / Update Stock</a>
-  <a href="amdStock" class="btn btn-secondary btn-lg">Delete Stock</a>
+  <a href="amdstock" class="btn btn-secondary btn-lg">Add / Update / Delete Stock</a>
   <a href="amdStock" class="btn btn-secondary btn-lg">Get Stock</a>
 </div>
 </div>
